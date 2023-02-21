@@ -10,10 +10,15 @@ with app.app_context(). See the documentation for more information.'''
 
 @app.route('/')
 def index():
-    g.example =  'g example variable'
-    return 'The test flask application is up' + g.example
-@app.route('/global_variable')
+    return 'The test flask application is up'
 
+@app.route('/global_variable')
+def global_check():
+    g.foo =  'g global variable example '
+    return_g_value  = get_g_value()
+    return "this is a global variable ---->"+return_g_value
+def get_g_value():
+    return g.foo
 
 if __name__== '__main__':
     app.run(debug=True,port=7860)

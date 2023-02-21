@@ -5,8 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     g.example =  'g example variable'
-    return 'The test flask application is up' + g.example
-@app.route('/global_variable')
+    return 'The test flask application is up'
 
 
 if __name__== '__main__':
