@@ -22,3 +22,10 @@ pytestpro/.idea
 pytestpro/.pytest_cache
 pytestpro/venv
 pythonflaskredicelerydocker/venv
+fbpro/fbenv
+mailpro/__pycache__
+RestApi/restvenv
+pythonflaskredicelerydocker/venv
+
+
+

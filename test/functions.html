@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Functions</title>
+</head>
+<body>
+	<h1>Functions Notes and Practise</h1>
+	<h3 id='name'>Login Page</h3>
+	<button onclick="helloUser()"id='login'>Login</button>
+	<!-- <button onclick="myFunction()">Click me</button> -->
+	<button onclick="helloUser()"id='goose'>Goose</button>
+	<button onmouseover="changeColor()" onmouseout="oldColor()" id='nalu'>Mouse over event Button</button>
+	<br>
+	First Name:<input  onchange="checkName()" type="text" id="firstname" >
+	<br>
+
+</body>
+
+	<script>
+			function checkName()
+			{
+				var first_name = document.getElementById('firstname').value;
+				if ( /^[a-zA-Z ]+$/.test(first_name) )
+				{
+					alert('correct name');
+				}
+				else
+				{
+					alert('wrong name');
+				}
+			}
+
+			function helloUser()
+			{
+				var name = prompt("give me your name");
+				var changer = document.getElementById('name');
+				changer.innerHTML= "Hello "+name;
+			}
+			function changeColor()
+			{
+				var but = document.getElementById('nalu');
+				but.style.backgroundColor = "#911";
+			}
+			function oldColor()
+			{
+				var but = document.getElementById('nalu');
+				but.style.backgroundColor = "lightgrey";
+			}
+
+			function add(par1,par2)
+			{
+				return par1+par2;
+			}
+			var return_value = add(6,7);
+			document.write(return_value);
+	</script>
+</html>
