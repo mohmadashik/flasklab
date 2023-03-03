@@ -4,7 +4,6 @@ from flask import Flask
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'lshglshduwiwkhskjdhgw8742'
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-# app.config['MAIL_PORT']= 587  
 app.config['MAIL_PORT']= 465  
 app.config['MAIL_USERNAME'] = 'agentravik@gmail.com'  
 app.config['MAIL_PASSWORD'] = 'uamlfkddxkchujrs'  
@@ -21,6 +20,7 @@ def email_send():
          mail.send(msg)
          return 'mail sent!'
       except Exception as e:
+         print(e)
          return 'mail not sent'
 
 @app.route('/')
