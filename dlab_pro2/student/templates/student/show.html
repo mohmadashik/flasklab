@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>students list</title>
+  </head>
+  <body>
+    <h1>students list</h1>
+    <tr>
+      <th> rank </th>
+      <th> name </th>
+      <th>edit</th>
+      <th>delete</th>
+    </tr>
+    <br>
+    <br>
+    {% for student in students %}
+      <tr>
+        <td>{{ student.rank }}</td>
+        <td>{{ student.name }}</td>
+        <td><a href="/edit/{{ student.id }}">Edit</a></td>
+        <td><a href="/delete/{{ student.id }}">Delete</a></td>
+      </tr>
+      <br>
+      <br>
+    {% endfor%}
+  </body>
+</html>
